@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Ano {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Digite um ano: ");
+        int ano = input.nextInt();
+        boolean bissexto = false;
+
+        if (ano % 4 == 0) {
+            if (ano % 100 != 0 || ano % 400 == 0) {
+                bissexto = true;
+            }
+        }
+
+        if (bissexto) {
+            System.out.println(ano + " Ano bissexto.");
+        } else {
+            System.out.println(ano + " Não é um ano bissexto.");
+        }
+    }
+}
